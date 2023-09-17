@@ -22,8 +22,6 @@ export class FlapComponent {
   isSuperscript: boolean = true;
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef, private cdRef: ChangeDetectorRef) {
-    // this.audio = new Audio('assets/hitHurt.wav');
-    // this.audio.volume = 0.5;
   }
 
 
