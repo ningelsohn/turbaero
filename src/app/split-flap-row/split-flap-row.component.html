@@ -1,0 +1,6 @@
+<div class="flap-row">
+    <app-flap class="flap" [isSuperscript]="isSuperscript" *ngFor="let isSuperscript of flapLayoutArray" [charOptions]="isSuperscript ? superscriptCharOptions : normalCharOptions"></app-flap>
+</div>
+<!-- <div class="flap-row">
+    <app-flap class="flap" *ngFor="let _ of [].constructor(row_len)" [charOptions]="charOptions"></app-flap>
+</div> -->

@@ -1,0 +1,98 @@
+
+$line-weight-thin: 0.5px;
+$line-weight-normal: 1.5px;
+
+.logo {
+
+    --line-weight: #{$line-weight-thin};
+
+    font-family: Abril Fatface;
+    font-family: Koulen;
+    color:rgb(112, 88, 247);
+    color:rgb(88, 247, 183);
+    color: rgb(247, 88, 136);
+    color: rgb(25, 25, 25);
+    font-size: 3em;
+    text-transform: lowercase;
+    line-height: 0.7em;
+    text-shadow: (-var(--line-weight)) (-var(--line-weight)) 0 rgb(152, 88, 247), var(--line-weight) (-var(--line-weight)) 0 rgb(247, 88, 136), -var(--line-weight) var(--line-weight) 0 rgb(247, 205, 88), var(--line-weight) var(--line-weight) 0 rgb(247, 88, 136);
+
+    text-shadow:
+    var(--line-weight) var(--line-weight) 0 rgb(152, 88, 247), /* Top left shadow */
+    calc(-1 * var(--line-weight)) var(--line-weight) 0 rgb(247, 88, 136), /* Top right shadow */
+    var(--line-weight) calc(-1 * var(--line-weight)) 0 rgb(247, 205, 88), /* Bottom left shadow */
+    calc(-1 * var(--line-weight)) calc(-1 * var(--line-weight)) 0 rgb(247, 88, 136); /* Bottom right shadow */
+
+    transition: all 0.3s;
+
+    &:hover {
+        --line-weight: #{$line-weight-normal};
+        // text-shadow: -$line-weight2 (-$line-weight2) 0 rgb(152, 88, 247), $line-weight2 (-$line-weight2) 0 rgb(247, 88, 136), -$line-weight2 $line-weight2 0 rgb(247, 205, 88), $line-weight2 $line-weight2 0 rgb(247, 88, 136);
+    }
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 4em;
+    padding: 1.2em;
+    transition: all 2s;
+    gap: 0.1em;
+
+    border: 1px solid rgb(88, 247, 183);
+    border: 1px solid whitesmoke;
+    border-radius: 2px;
+
+    background: rgb(25,25,25);
+    background: -moz-radial-gradient(circle, rgba(25,25,25,1) 0%, rgba(25,25,25,1) 50%, rgba(25,25,25,0.75) 75%, rgba(25,25,25,0) 100%);
+    background: -webkit-radial-gradient(circle, rgba(25,25,25,1) 0%, rgba(25,25,25,1) 50%, rgba(25,25,25,0.75) 75%, rgba(25,25,25,0) 100%);
+    background: radial-gradient(circle, rgba(25,25,25,1) 0%, rgba(25,25,25,1) 50%, rgba(25,25,25,0.75) 75%, rgba(25,25,25,0) 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#191919",endColorstr="#191919",GradientType=1);
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(88, 247, 183);
+    background-color: whitesmoke;
+    margin-bottom: 4px;
+    border-radius: 0.5px;
+    transition: all 0.6s;
+}
+
+.hamburger-menu span:nth-child(2) {
+    width: 80%;
+}
+
+.navigation {
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+
+    padding: 1.5em;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+
+    // background: rgb(25,25,25);
+    // background: -moz-linear-gradient(180deg, rgba(25,25,25,1) 0%, rgba(25,25,25,1) 50%, rgba(25,25,25,0.75) 75%, rgba(25,25,25,0) 100%);
+    // background: -webkit-linear-gradient(180deg, rgba(25,25,25,1) 0%, rgba(25,25,25,1) 50%, rgba(25,25,25,0.75) 75%, rgba(25,25,25,0) 100%);
+    // background: linear-gradient(180deg, rgba(25,25,25,1) 0%, rgba(25,25,25,1) 50%, rgba(25,25,25,0.75) 75%, rgba(25,25,25,0) 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#191919",endColorstr="#191919",GradientType=1);
+
+    pointer-events: none;
+  }

@@ -1,0 +1,13 @@
+.flap-row {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: none;
+    align-items: flex-start;
+    flex-basis: auto;
+
+    max-width: 100%;
+
+    .flap {
+        flex: 1;
+    }
+}
